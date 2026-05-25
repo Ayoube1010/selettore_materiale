@@ -8,7 +8,7 @@ import os
 # ==============================================================================
 st.set_page_config(page_title="selettore materiale", layout="wide")
 
-st.title("🛡️ Selettore Tecnico Avanzato")
+st.title("🛡️ Selettore Materiale")
 st.write("Filtra il database in tempo reale (0 secondi di attesa) selezionando solo le feature che ti interessano.")
 
 
