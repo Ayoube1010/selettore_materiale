@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import re
-
+import os
 
 # ==============================================================================
 # CONFIGURAZIONE STRUTTURALE DELLA PAGINA WEB
@@ -34,7 +34,10 @@ def carica_e_prepara_database(percorso_csv):
         st.error(f"Errore nel caricamento del file CSV: {e}")
         return None
 
-df_originale = carica_e_prepara_database("materiali_tecasint.csv")
+cartella_corrente = os.path.dirname(__file__)
+percorso_csv_assoluto = os.path.join(cartella_corrente, "materiali_tecasint.csv")
+
+df_originale = carica_e_prepara_database(percorso_csv_assoluto)
 
 if df_originale is not None:
     # Creiamo una copia di lavoro del database
